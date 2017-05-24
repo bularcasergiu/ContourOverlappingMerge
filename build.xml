@@ -17,7 +17,7 @@
     <property name="plugin.description" value="This plugin merge two overlapped contours.First selected contour is priority"/>
     <property name="plugin.icon" value="images/ContourOverlapping1.png"/>
     <property name="plugin.requires" value="turnrestrictions"/>
-    <!-- <property name="plugin.link" value="..."/>-->
+    <property name="plugin.link" value="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/ContourOverlappingMerge"/>
     <!--<property name="plugin.early" value="..."/>-->
     <!--<property name="plugin.requires" value="..."/>-->
     <!--<property name="plugin.stage" value="..."/>-->
