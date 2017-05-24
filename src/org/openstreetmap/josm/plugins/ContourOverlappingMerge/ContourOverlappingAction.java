@@ -48,7 +48,7 @@ import org.openstreetmap.josm.tools.I18n;
 public class ContourOverlappingAction extends JosmAction {
 	MapFrame thisMapFrame;
 	public ContourOverlappingAction(){
-		super(tr("ContourOverlappedMerge"), "images/dialogs/ContourOverlapping1.png",
+		super(tr("ContourOverlappedMerge"), "dialogs/ContourOverlapping1.png",
 		        tr("This plugin merge two overlapped contours.First selected contour is priority."),
 		        Shortcut.registerShortcut("menu:ContourOverlappingMerge", tr("Menu: {0}", tr("ContourOverlappingMerge")),
 		        KeyEvent.VK_0, Shortcut.DIRECT), true);

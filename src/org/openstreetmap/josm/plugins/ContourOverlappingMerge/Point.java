@@ -63,7 +63,7 @@ public class Point {
     
     public DataSet getDataSet()
     {
-      return Main.main.getCurrentDataSet();
+      return Main.main.getLayerManager().getEditDataSet();
     }
     DataSet dataset = getDataSet();   
 }

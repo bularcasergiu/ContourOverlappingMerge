@@ -54,7 +54,7 @@ public class ContourOverlappingDialog extends JPanel{
 	
 	public  DataSet getDataSet()
 	  {
-	    return Main.main.getCurrentDataSet();
+	    return Main.main.getLayerManager().getEditDataSet();
 	  }
 	public DataSet dataset = getDataSet();
 	 public Collection<Way> way = dataset.getSelectedWays();

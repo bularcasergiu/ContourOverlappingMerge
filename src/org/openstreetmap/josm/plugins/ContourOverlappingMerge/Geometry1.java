@@ -34,8 +34,7 @@ import org.openstreetmap.josm.data.osm.Relation;
 import org.openstreetmap.josm.data.osm.RelationMember;
 import org.openstreetmap.josm.data.osm.Way;
 import org.openstreetmap.josm.tools.CheckParameterUtil;
-import org.openstreetmap.josm.tools.Geometry;
-import org.openstreetmap.josm.tools.Predicate;
+import org.openstreetmap.josm.tools.Geometry; 
 
 import com.sun.javafx.geom.Line2D;
 
