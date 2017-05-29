@@ -15,7 +15,7 @@
     <property name="plugin.author" value="Sergiu Bularca"/>
     <property name="plugin.class" value="org.openstreetmap.josm.plugins.ContourOverlappingMerge.ContourOverlappingPlugin"/>
     <property name="plugin.description" value="This plugin merge two overlapped contours.First selected contour is priority"/>
-    <property name="plugin.icon" value="images/ContourOverlapping1.png"/>
+    <property name="plugin.icon" value="images/dialogs/ContourOverlapping1.png"/>
     <property name="plugin.requires" value="turnrestrictions"/>
     <property name="plugin.link" value="https://wiki.openstreetmap.org/wiki/JOSM/Plugins/ContourOverlappingMerge"/>
     <!--<property name="plugin.early" value="..."/>-->
