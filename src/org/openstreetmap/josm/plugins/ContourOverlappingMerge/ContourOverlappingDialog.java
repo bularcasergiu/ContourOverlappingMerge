@@ -32,6 +32,7 @@ import org.openstreetmap.josm.data.osm.DataSet;
 import org.openstreetmap.josm.data.osm.Node;
 import org.openstreetmap.josm.data.osm.OsmPrimitive;
 import org.openstreetmap.josm.data.osm.Way;
+import org.openstreetmap.josm.gui.MainApplication;
 import org.openstreetmap.josm.gui.MapFrame;
 import org.openstreetmap.josm.gui.MapView;
 import org.openstreetmap.josm.tools.Geometry;
@@ -54,7 +55,7 @@ public class ContourOverlappingDialog extends JPanel{
 	
 	public  DataSet getDataSet()
 	  {
-	    return Main.main.getLayerManager().getEditDataSet();
+	    return MainApplication.getLayerManager().getEditDataSet();
 	  }
 	public DataSet dataset = getDataSet();
 	 public Collection<Way> way = dataset.getSelectedWays();

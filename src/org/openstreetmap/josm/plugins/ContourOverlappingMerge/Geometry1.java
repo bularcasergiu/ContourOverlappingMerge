@@ -26,6 +26,7 @@ import org.openstreetmap.josm.command.Command;
 import org.openstreetmap.josm.data.coor.EastNorth;
 import org.openstreetmap.josm.data.coor.LatLon;
 import org.openstreetmap.josm.data.osm.BBox;
+import org.openstreetmap.josm.data.osm.DataSet;
 import org.openstreetmap.josm.data.osm.MultipolygonBuilder;
 import org.openstreetmap.josm.data.osm.Node;
 import org.openstreetmap.josm.data.osm.NodePositionComparator;
@@ -33,6 +34,7 @@ import org.openstreetmap.josm.data.osm.OsmPrimitiveType;
 import org.openstreetmap.josm.data.osm.Relation;
 import org.openstreetmap.josm.data.osm.RelationMember;
 import org.openstreetmap.josm.data.osm.Way;
+import org.openstreetmap.josm.gui.MainApplication;
 import org.openstreetmap.josm.tools.CheckParameterUtil;
 import org.openstreetmap.josm.tools.Geometry; 
 
@@ -56,10 +58,10 @@ public class Geometry1 {
 	     */
 	    public static EastNorth getSegmentSegmentIntersection(EastNorth p1, EastNorth p2, EastNorth p3, EastNorth p4) {
 
-	        CheckParameterUtil.ensureValidCoordinates(p1, "p1");
-	        CheckParameterUtil.ensureValidCoordinates(p2, "p2");
-	        CheckParameterUtil.ensureValidCoordinates(p3, "p3");
-	        CheckParameterUtil.ensureValidCoordinates(p4, "p4");
+	        CheckParameterUtil.ensure(p1, "p1", EastNorth::isValid);
+	        CheckParameterUtil.ensure(p2, "p2", EastNorth::isValid);
+	        CheckParameterUtil.ensure(p3, "p3", EastNorth::isValid);
+	        CheckParameterUtil.ensure(p4, "p4", EastNorth::isValid);
 	        
 	        
 
@@ -281,7 +283,9 @@ public class Geometry1 {
 	                                out.add(Seg2Coor2);
 
 	                                if (intNode == newNode) {
-	                                    cmds.add(new AddCommand(intNode));
+
+	                                    DataSet ds = MainApplication.getLayerManager().getEditDataSet();
+	                                    cmds.add(new AddCommand(ds, intNode));
 	                                }
 	                            }
 	                            for (int pos = 0; pos < ways.size(); pos ++) {
@@ -480,10 +484,10 @@ public class Geometry1 {
 	    
 	    public static List< EastNorth> getSegmentSegmentIntersection1(EastNorth p1, EastNorth p2, EastNorth p3, EastNorth p4) {
 
-	        CheckParameterUtil.ensureValidCoordinates(p1, "p1");
-	        CheckParameterUtil.ensureValidCoordinates(p2, "p2");
-	        CheckParameterUtil.ensureValidCoordinates(p3, "p3");
-	        CheckParameterUtil.ensureValidCoordinates(p4, "p4");
+	        CheckParameterUtil.ensure(p1, "p1", EastNorth::isValid);
+	        CheckParameterUtil.ensure(p2, "p2", EastNorth::isValid);
+	        CheckParameterUtil.ensure(p3, "p3", EastNorth::isValid);
+	        CheckParameterUtil.ensure(p4, "p4", EastNorth::isValid);
 	       
 	        
 
