@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import org.openstreetmap.josm.Main;
 import org.openstreetmap.josm.data.osm.Relation;
+import org.openstreetmap.josm.gui.MainApplication;
 import org.openstreetmap.josm.gui.MapFrame;
 import org.openstreetmap.josm.gui.preferences.PreferenceSetting;
 import org.openstreetmap.josm.plugins.Plugin;
@@ -25,7 +26,7 @@ public class ContourOverlappingPlugin extends Plugin{
     public ContourOverlappingPlugin(PluginInformation info) {
         super(info);
         ContourOverlappingAction plg= new ContourOverlappingAction();
-        Main.main.menu.toolsMenu.add(plg);
+        MainApplication.getMenu().toolsMenu.add(plg);
         System.out.println(getPluginDir());
     }
     

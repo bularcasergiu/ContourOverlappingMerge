@@ -13,6 +13,7 @@ import org.openstreetmap.josm.Main;
 import org.openstreetmap.josm.data.coor.LatLon;
 import org.openstreetmap.josm.data.osm.DataSet;
 import org.openstreetmap.josm.data.osm.Way;
+import org.openstreetmap.josm.gui.MainApplication;
 
 public class Point {
 
@@ -63,7 +64,7 @@ public class Point {
     
     public DataSet getDataSet()
     {
-      return Main.main.getCurrentDataSet();
+      return MainApplication.getLayerManager().getEditDataSet();
     }
     DataSet dataset = getDataSet();   
 }

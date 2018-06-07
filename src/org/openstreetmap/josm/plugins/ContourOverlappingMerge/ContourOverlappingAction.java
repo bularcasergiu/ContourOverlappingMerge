@@ -18,6 +18,7 @@ import java.awt.event.KeyEvent;
 
 import org.openstreetmap.josm.Main;
 import org.openstreetmap.josm.actions.JosmAction;
+import org.openstreetmap.josm.gui.MainApplication;
 import org.openstreetmap.josm.gui.MapFrame;
 import org.openstreetmap.josm.tools.Shortcut;
 import org.openstreetmap.josm.gui.Notification;
@@ -48,7 +49,7 @@ import org.openstreetmap.josm.tools.I18n;
 public class ContourOverlappingAction extends JosmAction {
 	MapFrame thisMapFrame;
 	public ContourOverlappingAction(){
-		super(tr("ContourOverlappedMerge"), "images/dialogs/ContourOverlapping1.png",
+		super(tr("ContourOverlappedMerge"), "dialogs/ContourOverlapping1.png",
 		        tr("This plugin merge two overlapped contours.First selected contour is priority."),
 		        Shortcut.registerShortcut("menu:ContourOverlappingMerge", tr("Menu: {0}", tr("ContourOverlappingMerge")),
 		        KeyEvent.VK_0, Shortcut.DIRECT), true);
@@ -118,7 +119,7 @@ public class ContourOverlappingAction extends JosmAction {
 		  
 		  
 		  Main.main.undoRedo.add(new SequenceCommand("crrr", cmds));
-	      Main.map.repaint();
+	      MainApplication.getMap().repaint();
 		  
 		new Notification(I18n.tr("This plugin merge two overlapped contours.First selected contour is priority", new Object[0])).setIcon(2).show();
 	    return;	
